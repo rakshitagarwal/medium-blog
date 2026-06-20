@@ -7,6 +7,12 @@ import { v2 as cloudinary } from "cloudinary";
 import { oauth2client } from "../utils/GoogleConfig.js";
 import axios from "axios";
 
+export const testUser = TryCatch(async (req, res) => {
+  res.json({
+    message: "User service is running",
+  });
+});
+
 export const loginUser = TryCatch(async (req, res) => {
   const { code } = req.body;
 

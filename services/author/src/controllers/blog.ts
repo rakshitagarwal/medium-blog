@@ -7,6 +7,12 @@ import cloudinary from "cloudinary";
 import { GoogleGenAI } from "@google/genai";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
+export const testBlog = TryCatch(async (req, res) => {
+  res.json({
+    message: "Author service is running",
+  });
+});
+
 export const createBlog = TryCatch(async (req: AuthenticatedRequest, res) => {
   const { title, description, blogcontent, category } = req.body;
 

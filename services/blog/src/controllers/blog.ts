@@ -4,6 +4,13 @@ import { sql } from "../utils/db.js";
 import TryCatch from "../utils/TryCatch.js";
 import axios from "axios";
 
+
+export const testBlog = TryCatch(async (req, res) => {
+  res.json({
+    message: "Blog service is running",
+  });
+});
+
 export const getAllBlogs = TryCatch(async (req, res) => {
   const { searchQuery = "", category = "" } = req.query;
 

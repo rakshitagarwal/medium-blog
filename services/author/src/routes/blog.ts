@@ -7,11 +7,13 @@ import {
   aiTitleResponse,
   createBlog,
   deleteBlog,
-  updateBlog,
+  updateBlog, 
+  testBlog,
 } from "../controllers/blog.js";
 
 const router = express();
 
+router.get("/blog/test", testBlog);
 router.post("/blog/new", isAuth, uploadFile, createBlog);
 router.post("/blog/:id", isAuth, uploadFile, updateBlog);
 router.delete("/blog/:id", isAuth, deleteBlog);

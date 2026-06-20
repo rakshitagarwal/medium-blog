@@ -7,11 +7,13 @@ import {
   getSavedBlog,
   getSingleBlog,
   saveBlog,
+  testBlog
 } from "../controllers/blog.js";
 import { isAuth } from "../middleware/isAuth.js";
 
 const router = express.Router();
 
+router.get("/blog/test", testBlog);
 router.get("/blog/all", getAllBlogs);
 router.get("/blog/:id", getSingleBlog);
 router.post("/comment/:id", isAuth, addComment);

@@ -5,12 +5,14 @@ import {
   myProfile,
   updateProfilePic,
   updateUser,
+  testUser,
 } from "../controllers/user.js";
 import { isAuth } from "../middleware/isAuth.js";
 import uploadFile from "../middleware/multer.js";
 
 const router = express.Router();
 
+router.get("/user/test", testUser);
 router.post("/login", loginUser);
 router.get("/me", isAuth, myProfile);
 router.get("/user/:id", getUserProfile);
