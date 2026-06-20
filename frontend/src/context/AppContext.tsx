@@ -12,9 +12,9 @@ import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 
-export const user_service = "http://localhost:5000";
-export const author_service = "http://localhost:5001";
-export const blog_service = "http://localhost:5002";
+export const user_service = "https://author-ctvt.onrender.com";
+export const author_service = "https://author-ctvt.onrender.com";
+export const blog_service = "https://blog-service-m930.onrender.com";
 
 export const blogCategories = [
   "Techonlogy",
